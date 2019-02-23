@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getPersonsResponse complex type.
+ * <p>Java class for getInstrumentsResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getPersonsResponse">
+ * &lt;complexType name="getInstrumentsResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://lab1_server.wst.vladimirg.com/}person" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://lab1_server.wst.vladimirg.com/}instrument" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,13 +29,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getPersonsResponse", propOrder = {
+@XmlType(name = "getInstrumentsResponse", propOrder = {
     "_return"
 })
-public class GetPersonsResponse {
+public class GetInstrumentsResponse {
 
     @XmlElement(name = "return")
-    protected List<Person> _return;
+    protected List<Instrument> _return;
 
     /**
      * Gets the value of the return property.
@@ -47,7 +47,7 @@ public class GetPersonsResponse {
      * This is why there is not a <CODE>set</CODE> method for the return property.
      * 
      * <p>
-     * For example, to add a new item, do as follows:
+     * For cli, to add a new item, do as follows:
      * <pre>
      *    getReturn().add(newItem);
      * </pre>
@@ -55,13 +55,13 @@ public class GetPersonsResponse {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Person }
+     * {@link Instrument }
      * 
      * 
      */
-    public List<Person> getReturn() {
+    public List<Instrument> getReturn() {
         if (_return == null) {
-            _return = new ArrayList<Person>();
+            _return = new ArrayList<Instrument>();
         }
         return this._return;
     }

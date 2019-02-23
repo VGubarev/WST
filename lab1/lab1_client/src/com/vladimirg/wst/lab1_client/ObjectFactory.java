@@ -24,8 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetPersons_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getPersons");
-    private final static QName _GetPersonsResponse_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getPersonsResponse");
+    private final static QName _GetInstrumentsResponse_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getInstrumentsResponse");
+    private final static QName _GetAllInstrumentsResponse_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getAllInstrumentsResponse");
+    private final static QName _GetAllInstruments_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getAllInstruments");
+    private final static QName _GetInstruments_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "getInstruments");
+    private final static QName _SQLException_QNAME = new QName("http://lab1_server.wst.vladimirg.com/", "SQLException");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.vladimirg.wst.lab1_client
@@ -35,45 +38,128 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetPersons }
+     * Create an instance of {@link GetAllInstrumentsResponse }
      * 
      */
-    public GetPersons createGetPersons() {
-        return new GetPersons();
+    public GetAllInstrumentsResponse createGetAllInstrumentsResponse() {
+        return new GetAllInstrumentsResponse();
     }
 
     /**
-     * Create an instance of {@link GetPersonsResponse }
+     * Create an instance of {@link GetInstrumentsResponse }
      * 
      */
-    public GetPersonsResponse createGetPersonsResponse() {
-        return new GetPersonsResponse();
+    public GetInstrumentsResponse createGetInstrumentsResponse() {
+        return new GetInstrumentsResponse();
     }
 
     /**
-     * Create an instance of {@link Person }
+     * Create an instance of {@link GetAllInstruments }
      * 
      */
-    public Person createPerson() {
-        return new Person();
+    public GetAllInstruments createGetAllInstruments() {
+        return new GetAllInstruments();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersons }{@code >}}
+     * Create an instance of {@link GetInstruments }
      * 
      */
-    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getPersons")
-    public JAXBElement<GetPersons> createGetPersons(GetPersons value) {
-        return new JAXBElement<GetPersons>(_GetPersons_QNAME, GetPersons.class, null, value);
+    public GetInstruments createGetInstruments() {
+        return new GetInstruments();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonsResponse }{@code >}}
+     * Create an instance of {@link SQLException }
      * 
      */
-    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getPersonsResponse")
-    public JAXBElement<GetPersonsResponse> createGetPersonsResponse(GetPersonsResponse value) {
-        return new JAXBElement<GetPersonsResponse>(_GetPersonsResponse_QNAME, GetPersonsResponse.class, null, value);
+    public SQLException createSQLException() {
+        return new SQLException();
+    }
+
+    /**
+     * Create an instance of {@link Exception }
+     * 
+     */
+    public Exception createException() {
+        return new Exception();
+    }
+
+    /**
+     * Create an instance of {@link Throwable }
+     * 
+     */
+    public Throwable createThrowable() {
+        return new Throwable();
+    }
+
+    /**
+     * Create an instance of {@link Instrument }
+     * 
+     */
+    public Instrument createInstrument() {
+        return new Instrument();
+    }
+
+    /**
+     * Create an instance of {@link SqlException }
+     * 
+     */
+    public SqlException createSqlException() {
+        return new SqlException();
+    }
+
+    /**
+     * Create an instance of {@link StackTraceElement }
+     * 
+     */
+    public StackTraceElement createStackTraceElement() {
+        return new StackTraceElement();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetInstrumentsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getInstrumentsResponse")
+    public JAXBElement<GetInstrumentsResponse> createGetInstrumentsResponse(GetInstrumentsResponse value) {
+        return new JAXBElement<GetInstrumentsResponse>(_GetInstrumentsResponse_QNAME, GetInstrumentsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllInstrumentsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getAllInstrumentsResponse")
+    public JAXBElement<GetAllInstrumentsResponse> createGetAllInstrumentsResponse(GetAllInstrumentsResponse value) {
+        return new JAXBElement<GetAllInstrumentsResponse>(_GetAllInstrumentsResponse_QNAME, GetAllInstrumentsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllInstruments }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getAllInstruments")
+    public JAXBElement<GetAllInstruments> createGetAllInstruments(GetAllInstruments value) {
+        return new JAXBElement<GetAllInstruments>(_GetAllInstruments_QNAME, GetAllInstruments.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetInstruments }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "getInstruments")
+    public JAXBElement<GetInstruments> createGetInstruments(GetInstruments value) {
+        return new JAXBElement<GetInstruments>(_GetInstruments_QNAME, GetInstruments.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SQLException }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab1_server.wst.vladimirg.com/", name = "SQLException")
+    public JAXBElement<SQLException> createSQLException(SQLException value) {
+        return new JAXBElement<SQLException>(_SQLException_QNAME, SQLException.class, null, value);
     }
 
 }
