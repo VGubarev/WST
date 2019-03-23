@@ -1,0 +1,12 @@
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/App.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/ConnectionUtil.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/exceptions/IllegalArgumentException.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/Instrument.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/exceptions/UnknownFieldsException.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/exceptions/InstrumentServiceFault.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/exceptions/DatabaseFailureException.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/OperationStatus.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/InstrumentFields.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java
+/home/izoomko/wrk/5grade/wst/WST/lab3/server/src/main/java/org/vladimirg/wst/lab3/FieldFilter.java
