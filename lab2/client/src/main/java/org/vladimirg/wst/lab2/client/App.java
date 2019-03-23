@@ -112,6 +112,25 @@ public class App {
         }
 
         {
+            System.out.println("Upload message");
+
+            FieldFilter instrument = new FieldFilter();
+            FieldFilter.Fields fields = new FieldFilter.Fields();
+
+            {
+                FieldFilter.Fields.Entry entry = new FieldFilter.Fields.Entry();
+                entry.setKey("ID");
+                entry.setValue(res.toString());
+                fields.getEntry().add(entry);
+            }
+
+            instrument.setFields(fields);
+            byte[] message = new byte[] {(byte) 0b11011110, (byte) 0b10101101, (byte) 0b10111110, (byte) 0b11101111};
+            OperationStatus status = personService.getInstrumentWebServicePort().uploadMessage(instrument, message);
+            System.out.println("Uploaded message to instrument with ID=" + res + ", status=" + printStatus(status));
+        }
+
+        {
             System.out.println("Get all instruments");
             FieldFilter filter = new FieldFilter();
             List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);

@@ -85,4 +85,22 @@ public interface InstrumentWebService {
         @WebParam(name = "filter", targetNamespace = "")
         FieldFilter filter);
 
+    /**
+     * 
+     * @param filter
+     * @param message
+     * @return
+     *     returns org.vladimirg.wst.lab2.client.generated.OperationStatus
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "uploadMessage", targetNamespace = "http://lab2.wst.vladimirg.org/", className = "org.vladimirg.wst.lab2.client.generated.UploadMessage")
+    @ResponseWrapper(localName = "uploadMessageResponse", targetNamespace = "http://lab2.wst.vladimirg.org/", className = "org.vladimirg.wst.lab2.client.generated.UploadMessageResponse")
+    @Action(input = "http://lab2.wst.vladimirg.org/InstrumentWebService/uploadMessageRequest", output = "http://lab2.wst.vladimirg.org/InstrumentWebService/uploadMessageResponse")
+    public OperationStatus uploadMessage(
+        @WebParam(name = "filter", targetNamespace = "")
+        FieldFilter filter,
+        @WebParam(name = "message", targetNamespace = "")
+        byte[] message);
+
 }

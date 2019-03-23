@@ -1,5 +1,6 @@
 package org.vladimirg.wst.lab2;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Instrument {
@@ -8,6 +9,7 @@ public class Instrument {
     private String ISIN;
     private Date validUntil;
     private Boolean derivative;
+    private byte[] message;
 
     public Integer getId() {
         return id;
@@ -48,6 +50,10 @@ public class Instrument {
     public void setDerivative(Boolean derivative) {
         this.derivative = derivative;
     }
+
+    public byte[] getMessage() { return message; }
+
+    public void setMessage(byte[] message) { this.message = message; }
 
     @Override
     public String toString() {

@@ -5,8 +5,10 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.ws.soap.MTOM;
 
 @WebService(serviceName = "InstrumentService")
+@MTOM
 public class InstrumentWebService {
     @WebMethod(operationName = "getInstruments")
     public List<Instrument> getInstruments(@WebParam(name = "filter") FieldFilter filter) {
@@ -50,6 +52,18 @@ public class InstrumentWebService {
         try {
             InstrumentFields instrumentFields = new InstrumentFields(filter);
             return db.deleteInstrument(instrumentFields);
+        } catch (UnknownFieldsException e) {
+            e.printStackTrace();
+        }
+        return new OperationStatus(false, "Failed");
+    }
+
+    @WebMethod(operationName = "uploadMessage")
+    public OperationStatus uploadMessage(@WebParam(name = "filter") FieldFilter filter, @WebParam(name="message") byte[] message) {
+        InstrumentDB db = new InstrumentDB(ConnectionUtil.getConnection());
+        try {
+            InstrumentFields instrumentFields = new InstrumentFields(filter);
+            return db.uploadMessage(instrumentFields, message);
         } catch (UnknownFieldsException e) {
             e.printStackTrace();
         }

@@ -28,10 +28,13 @@ public class ObjectFactory {
     private final static QName _DeleteInstrumentResponse_QNAME = new QName("http://lab2.wst.vladimirg.org/", "deleteInstrumentResponse");
     private final static QName _UpdateInstrument_QNAME = new QName("http://lab2.wst.vladimirg.org/", "updateInstrument");
     private final static QName _UpdateInstrumentResponse_QNAME = new QName("http://lab2.wst.vladimirg.org/", "updateInstrumentResponse");
+    private final static QName _UploadMessageResponse_QNAME = new QName("http://lab2.wst.vladimirg.org/", "uploadMessageResponse");
     private final static QName _DeleteInstrument_QNAME = new QName("http://lab2.wst.vladimirg.org/", "deleteInstrument");
+    private final static QName _UploadMessage_QNAME = new QName("http://lab2.wst.vladimirg.org/", "uploadMessage");
     private final static QName _GetInstruments_QNAME = new QName("http://lab2.wst.vladimirg.org/", "getInstruments");
     private final static QName _CreateInstrumentResponse_QNAME = new QName("http://lab2.wst.vladimirg.org/", "createInstrumentResponse");
     private final static QName _GetInstrumentsResponse_QNAME = new QName("http://lab2.wst.vladimirg.org/", "getInstrumentsResponse");
+    private final static QName _UploadMessageMessage_QNAME = new QName("", "message");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.vladimirg.wst.lab2.client.generated
@@ -73,6 +76,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UploadMessage }
+     * 
+     */
+    public UploadMessage createUploadMessage() {
+        return new UploadMessage();
+    }
+
+    /**
      * Create an instance of {@link GetInstruments }
      * 
      */
@@ -102,6 +113,14 @@ public class ObjectFactory {
      */
     public UpdateInstrumentResponse createUpdateInstrumentResponse() {
         return new UpdateInstrumentResponse();
+    }
+
+    /**
+     * Create an instance of {@link UploadMessageResponse }
+     * 
+     */
+    public UploadMessageResponse createUploadMessageResponse() {
+        return new UploadMessageResponse();
     }
 
     /**
@@ -181,12 +200,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UploadMessageResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab2.wst.vladimirg.org/", name = "uploadMessageResponse")
+    public JAXBElement<UploadMessageResponse> createUploadMessageResponse(UploadMessageResponse value) {
+        return new JAXBElement<UploadMessageResponse>(_UploadMessageResponse_QNAME, UploadMessageResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteInstrument }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://lab2.wst.vladimirg.org/", name = "deleteInstrument")
     public JAXBElement<DeleteInstrument> createDeleteInstrument(DeleteInstrument value) {
         return new JAXBElement<DeleteInstrument>(_DeleteInstrument_QNAME, DeleteInstrument.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UploadMessage }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab2.wst.vladimirg.org/", name = "uploadMessage")
+    public JAXBElement<UploadMessage> createUploadMessage(UploadMessage value) {
+        return new JAXBElement<UploadMessage>(_UploadMessage_QNAME, UploadMessage.class, null, value);
     }
 
     /**
@@ -214,6 +251,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://lab2.wst.vladimirg.org/", name = "getInstrumentsResponse")
     public JAXBElement<GetInstrumentsResponse> createGetInstrumentsResponse(GetInstrumentsResponse value) {
         return new JAXBElement<GetInstrumentsResponse>(_GetInstrumentsResponse_QNAME, GetInstrumentsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "", name = "message", scope = UploadMessage.class)
+    public JAXBElement<byte[]> createUploadMessageMessage(byte[] value) {
+        return new JAXBElement<byte[]>(_UploadMessageMessage_QNAME, byte[].class, UploadMessage.class, ((byte[]) value));
     }
 
 }

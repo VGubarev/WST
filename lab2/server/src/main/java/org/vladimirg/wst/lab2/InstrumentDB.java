@@ -1,5 +1,7 @@
 package org.vladimirg.wst.lab2;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -258,6 +260,29 @@ public class InstrumentDB {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public OperationStatus uploadMessage(InstrumentFields instrumentFields, byte[] message) {
+        Integer id = instrumentFields.getId();
+        if (id == null) {
+            return new OperationStatus(false, "Instrument identifier is required to update instrument");
+        }
+
+        String queryStr = "UPDATE instruments SET message = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = null;
+            stmt = connection.prepareStatement(queryStr);
+            ByteArrayInputStream bs = new ByteArrayInputStream(message);
+            stmt.setBinaryStream(1, bs, message.length);
+            stmt.setInt(2, id);
+            bs.close();
+            stmt.execute();
+        } catch (SQLException | IOException  e) {
+            e.printStackTrace();
+            return new OperationStatus(false, "Exception is thrown.");
+        }
+
+        return new OperationStatus(true, "Uploaded");
     }
 
     private List<Instrument> parseResultSet(ResultSet rs) {

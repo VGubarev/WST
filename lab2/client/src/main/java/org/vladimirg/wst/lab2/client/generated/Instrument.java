@@ -23,6 +23,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ISIN" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="MIC" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
  *         &lt;element name="validUntil" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -38,6 +39,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "isin",
     "id",
     "mic",
+    "message",
     "validUntil"
 })
 public class Instrument {
@@ -48,6 +50,7 @@ public class Instrument {
     protected Integer id;
     @XmlElement(name = "MIC")
     protected String mic;
+    protected byte[] message;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar validUntil;
 
@@ -145,6 +148,28 @@ public class Instrument {
      */
     public void setMIC(String value) {
         this.mic = value;
+    }
+
+    /**
+     * Gets the value of the message property.
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
+     */
+    public byte[] getMessage() {
+        return message;
+    }
+
+    /**
+     * Sets the value of the message property.
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
+     */
+    public void setMessage(byte[] value) {
+        this.message = value;
     }
 
     /**
