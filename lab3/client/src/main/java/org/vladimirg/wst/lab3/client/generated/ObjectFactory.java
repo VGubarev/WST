@@ -35,6 +35,7 @@ public class ObjectFactory {
     private final static QName _UnknownFieldsException_QNAME = new QName("http://lab3.wst.vladimirg.org/", "UnknownFieldsException");
     private final static QName _GetInstruments_QNAME = new QName("http://lab3.wst.vladimirg.org/", "getInstruments");
     private final static QName _DeleteInstrument_QNAME = new QName("http://lab3.wst.vladimirg.org/", "deleteInstrument");
+    private final static QName _ThrottleException_QNAME = new QName("http://lab3.wst.vladimirg.org/", "ThrottleException");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.vladimirg.wst.lab3.client.generated
@@ -97,6 +98,14 @@ public class ObjectFactory {
      */
     public DeleteInstrument createDeleteInstrument() {
         return new DeleteInstrument();
+    }
+
+    /**
+     * Create an instance of {@link ThrottleException }
+     * 
+     */
+    public ThrottleException createThrottleException() {
+        return new ThrottleException();
     }
 
     /**
@@ -276,6 +285,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://lab3.wst.vladimirg.org/", name = "deleteInstrument")
     public JAXBElement<DeleteInstrument> createDeleteInstrument(DeleteInstrument value) {
         return new JAXBElement<DeleteInstrument>(_DeleteInstrument_QNAME, DeleteInstrument.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ThrottleException }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://lab3.wst.vladimirg.org/", name = "ThrottleException")
+    public JAXBElement<ThrottleException> createThrottleException(ThrottleException value) {
+        return new JAXBElement<ThrottleException>(_ThrottleException_QNAME, ThrottleException.class, null, value);
     }
 
 }

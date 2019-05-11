@@ -27,7 +27,7 @@ public class App {
             try {
                 instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -44,7 +44,7 @@ public class App {
             try {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -62,7 +62,7 @@ public class App {
             try {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -101,10 +101,10 @@ public class App {
             instrument.setFields(fields);
             try {
                 res = personService.getInstrumentWebServicePort().createInstrument(instrument);
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+                System.out.println("Inserted instrument with ID=" + res);
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
-            System.out.println("Inserted instrument with ID=" + res);
         }
 
         {
@@ -114,7 +114,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -141,7 +141,7 @@ public class App {
             try {
                 OperationStatus status = personService.getInstrumentWebServicePort().updateInstrument(instrument);
                 System.out.println("Updated instrument with ID=" + res + ", status=" + printStatus(status));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -153,7 +153,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -174,7 +174,7 @@ public class App {
             try {
                 OperationStatus status = personService.getInstrumentWebServicePort().deleteInstrument(instrument);
                 System.out.println("Deleted instrument with ID=" + res + ", status=" + printStatus(status));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -186,7 +186,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }

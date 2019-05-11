@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621fabb7-2314-40e3-9e9f-6596c7dba3dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/DatabaseFailureException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/DatabaseFailureException_Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/IllegalArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/IllegalArgumentException_Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentService.wsdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentServiceFault.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentWebService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/UnknownFieldsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/UnknownFieldsException_Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/DatabaseFailureException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/IllegalArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/InstrumentServiceFault.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/UnknownFieldsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/ThrottleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/ThrottleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
@@ -27,39 +12,13 @@
       <change beforePath="$PROJECT_DIR$/../lab1_ee/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1_ee/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1_ee/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1_ee/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/server_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/CreateInstrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/CreateInstrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/CreateInstrumentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/CreateInstrumentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/DeleteInstrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/DeleteInstrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/DeleteInstrumentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/DeleteInstrumentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/FieldFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/FieldFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/GetInstruments.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/GetInstruments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/GetInstrumentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/GetInstrumentsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/Instrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/Instrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/InstrumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/InstrumentService.wsdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/InstrumentService1.wsdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/InstrumentWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/OperationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/OperationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/UpdateInstrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/UpdateInstrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/UpdateInstrumentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/UpdateInstrumentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab2/client/generated/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/ConnectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/FieldFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/FieldFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/Instrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/Instrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/InstrumentDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/InstrumentFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/InstrumentWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/OperationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/OperationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab2/UnknownFieldsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/InstrumentWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/generated/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/server/target/" />
@@ -76,10 +35,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/App.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="360">
+              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,11 +49,47 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="115" column="38" lean-forward="true" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+            <state relative-caret-position="263">
+              <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="207" selection-start-line="207" selection-end-line="207" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/ThrottleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/ThrottleException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -111,6 +109,9 @@
       <find>OperationStatus</find>
       <find>return new OperationStatus(false, &quot;Instrument identifier is required to update instrument&quot;);</find>
       <find>viid</find>
+      <find>DatabaseFa</find>
+      <find>add</find>
+      <find>Inserted instru</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -128,8 +129,11 @@
         <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentFields.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/OperationStatus.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/Instrument.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/ThrottleException.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/RingBuffer.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/ThrottleService.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java" />
       </list>
     </option>
@@ -170,8 +174,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
+    <option name="y" value="-18" />
     <option name="width" value="1924" />
-    <option name="height" value="1063" />
+    <option name="height" value="1081" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,7 +255,54 @@
             <path>
               <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
               <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
@@ -258,12 +310,19 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,17 +333,20 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2621469" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/src/main/java" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.vladimirg.wst.lab3.exceptions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src/main/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -371,17 +433,21 @@
       <workItem from="1553372317848" duration="189000" />
       <workItem from="1553373479431" duration="110000" />
       <workItem from="1553373675069" duration="572000" />
+      <workItem from="1554562188111" duration="419000" />
+      <workItem from="1556902328263" duration="729000" />
+      <workItem from="1556907952006" duration="92000" />
+      <workItem from="1557573289712" duration="4771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26299000" />
+    <option name="totallyTimeSpent" value="32310000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1924" height="1063" extended-state="0" />
+    <frame x="-2" y="-18" width="1924" height="1081" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21778488" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22630458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -391,7 +457,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.327818" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946752" weight="0.4064116" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +465,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005325" side_tool="true" weight="0.32947367" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32982087" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32885212" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
@@ -558,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -589,27 +645,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java">
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/javax/jws/WebService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret line="207" column="29" selection-start-line="207" selection-start-column="19" selection-end-line="207" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Date.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="451" column="19" selection-start-line="451" selection-start-column="19" selection-end-line="451" selection-end-column="19" />
+          <folding>
+            <element signature="e#16203#16204#0" expanded="true" />
+            <element signature="e#16263#16264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/DatabaseFailureException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/LinkedList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="181" column="22" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/RingBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/exceptions/ThrottleException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/InstrumentDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="207" selection-start-line="207" selection-end-line="207" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/org/vladimirg/wst/lab3/ThrottleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab3/client/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="115" column="38" lean-forward="true" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+        <state relative-caret-position="263">
+          <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -627,7 +766,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2621469" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -670,11 +808,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>server</last-edited>
+          <last-edited>client</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2621469" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
