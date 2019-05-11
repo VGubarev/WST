@@ -7,6 +7,7 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.core.header.FormDataContentDisposition;
+import com.sun.jersey.core.util.Base64;
 import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.multipart.impl.MultiPartWriter;
@@ -20,6 +21,10 @@ import javax.ws.rs.core.MediaType;
 public class ClientApp {
     static String URL = "http://0.0.0.0:8080/rest/instruments";
     static String FILE_URL = "http://0.0.0.0:8080/rest/files/upload";
+
+    static String LOGIN = "admin";
+    static String PASSWORD = "admin";
+    static String AUTH_DATA = "Basic " + new String(Base64.encode(LOGIN + ":" + PASSWORD));
 
     public static void main(String[] args)
     {
@@ -74,7 +79,7 @@ public class ClientApp {
             webResource = webResource.queryParam("filter", filter);
         }
         ClientResponse response =
-                webResource.accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
+                webResource.accept(MediaType.APPLICATION_JSON).header("authorization", AUTH_DATA).get(ClientResponse.class);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException(response.getEntity(java.lang.String.class));
         }
@@ -85,7 +90,7 @@ public class ClientApp {
     private static Integer createInstrument(Client client, Instrument instrument) throws IllegalStateException {
         WebResource webResource = client.resource(URL);
         ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
-                .post(ClientResponse.class, instrument);
+                .header("authorization", AUTH_DATA).post(ClientResponse.class, instrument);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException("Request failed: " + response.toString());
         }
@@ -97,7 +102,7 @@ public class ClientApp {
         WebResource webResource = client.resource(URL);
         ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .put(ClientResponse.class, instrument);
+                .header("authorization", AUTH_DATA).put(ClientResponse.class, instrument);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException("Request failed: " + response.toString());
         }
@@ -109,7 +114,7 @@ public class ClientApp {
         WebResource webResource = client.resource(URL);
         ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .delete(ClientResponse.class, instrument);
+                .header("authorization", AUTH_DATA).delete(ClientResponse.class, instrument);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException("Request failed: " + response.toString());
         }
@@ -123,7 +128,7 @@ public class ClientApp {
                 new FileInputStream(fileLocation), MediaType.APPLICATION_OCTET_STREAM_TYPE));
         WebResource webResource = client.resource(FILE_URL);
         ClientResponse response = webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE)
-                .post(ClientResponse.class, formPart);
+                .header("authorization", AUTH_DATA).post(ClientResponse.class, formPart);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException("Request failed: " + response.toString());
         }

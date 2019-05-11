@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0102a763-9bc6-42f8-b34b-935fba323b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_multipart_1_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_mimepull_mimepull_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/FileResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
@@ -23,19 +19,9 @@
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_17_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_grizzly2_1_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_17_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_grizzly2_1_17_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_17_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_17_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_17_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/standalone/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/standalone/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/standalone/standalone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/standalone/standalone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/standalone/target/" />
@@ -67,32 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/ClientApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="122" column="92" selection-start-line="122" selection-start-column="92" selection-end-line="122" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/contribs/jersey-multipart/1.19/jersey-multipart-1.19.jar!/com/sun/jersey/multipart/impl/MultiPartWriter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/FileResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="-13">
+              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="240">
+              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,11 +77,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pom.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="330">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,10 +151,14 @@
         <option value="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/OperationStatus.java" />
         <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/InstrumentResource.java" />
         <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/FileService.java" />
-        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java" />
         <option value="$PROJECT_DIR$/standalone/pom.xml" />
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/ClientApp.java" />
+        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthentificationFilter.java" />
+        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthentificationService.java" />
+        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationService.java" />
+        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java" />
+        <option value="$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationFilter.java" />
       </list>
     </option>
   </component>
@@ -541,12 +513,12 @@
       <workItem from="1555756698876" duration="495000" />
       <workItem from="1555758931128" duration="13162000" />
       <workItem from="1556900782599" duration="1472000" />
-      <workItem from="1557578587057" duration="3653000" />
+      <workItem from="1557578587057" duration="4626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31560000" />
+    <option name="totallyTimeSpent" value="32533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1063" extended-state="0" />
@@ -593,14 +565,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Boolean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/j2ee/src/main/java/org/vladimirg/wst/lab5/j2ee/ConnectionUtil.java" />
     <entry file="file://$PROJECT_DIR$/j2ee/j2ee.iml" />
     <entry file="file://$PROJECT_DIR$/j2ee/src/main/java/org/vladimirg/wst/lab5/j2ee/App.java" />
     <entry file="file://$PROJECT_DIR$/j2ee/src/main/main.iml" />
@@ -911,16 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/contribs/jersey-multipart/1.19/jersey-multipart-1.19.jar!/com/sun/jersey/multipart/FormDataBodyPart.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -945,10 +899,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/org/vladimirg/wst/lab5/client/ClientApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="122" column="92" selection-start-line="122" selection-start-column="92" selection-end-line="122" selection-end-column="92" />
+        <state relative-caret-position="-13">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/standalone/src/main/java/org/vladimirg/wst/lab5/standalone/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

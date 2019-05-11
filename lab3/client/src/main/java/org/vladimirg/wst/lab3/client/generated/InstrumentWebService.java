@@ -31,9 +31,10 @@ public interface InstrumentWebService {
      * @param filter
      * @return
      *     returns java.util.List<org.vladimirg.wst.lab3.client.generated.Instrument>
+     * @throws ThrottleException_Exception
      * @throws DatabaseFailureException_Exception
      * @throws UnknownFieldsException_Exception
-     * @throws ThrottleException_Exception
+     * @throws AuthenticationException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -42,12 +43,13 @@ public interface InstrumentWebService {
     @Action(input = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstrumentsRequest", output = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstrumentsResponse", fault = {
         @FaultAction(className = UnknownFieldsException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstruments/Fault/UnknownFieldsException"),
         @FaultAction(className = DatabaseFailureException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstruments/Fault/DatabaseFailureException"),
-        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstruments/Fault/ThrottleException")
+        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstruments/Fault/ThrottleException"),
+        @FaultAction(className = AuthenticationException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/getInstruments/Fault/AuthenticationException")
     })
     public List<Instrument> getInstruments(
         @WebParam(name = "filter", targetNamespace = "")
         FieldFilter filter)
-        throws DatabaseFailureException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
+        throws AuthenticationException_Exception, DatabaseFailureException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
     ;
 
     /**
@@ -55,9 +57,10 @@ public interface InstrumentWebService {
      * @param instrument
      * @return
      *     returns java.lang.Integer
+     * @throws ThrottleException_Exception
      * @throws DatabaseFailureException_Exception
      * @throws UnknownFieldsException_Exception
-     * @throws ThrottleException_Exception
+     * @throws AuthenticationException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -66,12 +69,13 @@ public interface InstrumentWebService {
     @Action(input = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrumentRequest", output = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrumentResponse", fault = {
         @FaultAction(className = UnknownFieldsException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrument/Fault/UnknownFieldsException"),
         @FaultAction(className = DatabaseFailureException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrument/Fault/DatabaseFailureException"),
-        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrument/Fault/ThrottleException")
+        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrument/Fault/ThrottleException"),
+        @FaultAction(className = AuthenticationException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/createInstrument/Fault/AuthenticationException")
     })
     public Integer createInstrument(
         @WebParam(name = "instrument", targetNamespace = "")
         FieldFilter instrument)
-        throws DatabaseFailureException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
+        throws AuthenticationException_Exception, DatabaseFailureException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
     ;
 
     /**
@@ -80,9 +84,10 @@ public interface InstrumentWebService {
      * @return
      *     returns org.vladimirg.wst.lab3.client.generated.OperationStatus
      * @throws IllegalArgumentException_Exception
+     * @throws ThrottleException_Exception
      * @throws DatabaseFailureException_Exception
      * @throws UnknownFieldsException_Exception
-     * @throws ThrottleException_Exception
+     * @throws AuthenticationException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -92,12 +97,13 @@ public interface InstrumentWebService {
         @FaultAction(className = UnknownFieldsException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/UnknownFieldsException"),
         @FaultAction(className = DatabaseFailureException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/DatabaseFailureException"),
         @FaultAction(className = IllegalArgumentException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/IllegalArgumentException"),
-        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/ThrottleException")
+        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/ThrottleException"),
+        @FaultAction(className = AuthenticationException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/updateInstrument/Fault/AuthenticationException")
     })
     public OperationStatus updateInstrument(
         @WebParam(name = "filter", targetNamespace = "")
         FieldFilter filter)
-        throws DatabaseFailureException_Exception, IllegalArgumentException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
+        throws AuthenticationException_Exception, DatabaseFailureException_Exception, IllegalArgumentException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
     ;
 
     /**
@@ -106,9 +112,10 @@ public interface InstrumentWebService {
      * @return
      *     returns org.vladimirg.wst.lab3.client.generated.OperationStatus
      * @throws IllegalArgumentException_Exception
+     * @throws ThrottleException_Exception
      * @throws DatabaseFailureException_Exception
      * @throws UnknownFieldsException_Exception
-     * @throws ThrottleException_Exception
+     * @throws AuthenticationException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -118,12 +125,13 @@ public interface InstrumentWebService {
         @FaultAction(className = UnknownFieldsException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/UnknownFieldsException"),
         @FaultAction(className = DatabaseFailureException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/DatabaseFailureException"),
         @FaultAction(className = IllegalArgumentException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/IllegalArgumentException"),
-        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/ThrottleException")
+        @FaultAction(className = ThrottleException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/ThrottleException"),
+        @FaultAction(className = AuthenticationException_Exception.class, value = "http://lab3.wst.vladimirg.org/InstrumentWebService/deleteInstrument/Fault/AuthenticationException")
     })
     public OperationStatus deleteInstrument(
         @WebParam(name = "filter", targetNamespace = "")
         FieldFilter filter)
-        throws DatabaseFailureException_Exception, IllegalArgumentException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
+        throws AuthenticationException_Exception, DatabaseFailureException_Exception, IllegalArgumentException_Exception, ThrottleException_Exception, UnknownFieldsException_Exception
     ;
 
 }

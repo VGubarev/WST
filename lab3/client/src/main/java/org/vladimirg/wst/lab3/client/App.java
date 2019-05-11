@@ -5,14 +5,14 @@ import org.vladimirg.wst.lab3.client.generated.*;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.handler.MessageContext;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 @SuppressWarnings("Duplicates")
 public class App {
@@ -25,9 +25,16 @@ public class App {
             FieldFilter filter = new FieldFilter();
             List<Instrument> instruments = null;
             try {
-                instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
+                InstrumentWebService port = personService.getInstrumentWebServicePort();
+                Map<String, Object> req_ctx = ((BindingProvider)port).getRequestContext();
+                Map<String, List<String>> headers = new HashMap<String, List<String>>();
+                List<String> credentials = new ArrayList<String>();
+                credentials.add(new String(Base64.getEncoder().encode(new String("admin:admin").getBytes())));
+                headers.put("Authorization", credentials);
+                req_ctx.put(MessageContext.HTTP_REQUEST_HEADERS, headers);
+                instruments = port.getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -44,7 +51,7 @@ public class App {
             try {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -62,7 +69,7 @@ public class App {
             try {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -102,7 +109,7 @@ public class App {
             try {
                 res = personService.getInstrumentWebServicePort().createInstrument(instrument);
                 System.out.println("Inserted instrument with ID=" + res);
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -114,7 +121,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -141,7 +148,7 @@ public class App {
             try {
                 OperationStatus status = personService.getInstrumentWebServicePort().updateInstrument(instrument);
                 System.out.println("Updated instrument with ID=" + res + ", status=" + printStatus(status));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -153,7 +160,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -174,7 +181,7 @@ public class App {
             try {
                 OperationStatus status = personService.getInstrumentWebServicePort().deleteInstrument(instrument);
                 System.out.println("Deleted instrument with ID=" + res + ", status=" + printStatus(status));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | IllegalArgumentException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -186,7 +193,7 @@ public class App {
                 List<Instrument> instruments = personService.getInstrumentWebServicePort().getInstruments(filter);
 
                 instruments.forEach(instrument -> System.out.println(getStringFromInstrument(instrument)));
-            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception e) {
+            } catch (DatabaseFailureException_Exception | UnknownFieldsException_Exception | ThrottleException_Exception | AuthenticationException_Exception e) {
                 System.out.println(e.getMessage());
             }
         }
